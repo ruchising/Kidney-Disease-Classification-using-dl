@@ -40,9 +40,50 @@ for filepath in list_of_files:
         
     else:
         logging.info(f"{filename} is already exists")
-        
-    
-    
-        
-   
-        
+
+
+
+
+if __name__ == "__main__":
+    from src.cnnClassifier.components.model import create_model
+    import numpy as np
+
+    print("Starting training...")
+
+    # dummy data
+    X = np.random.rand(100,128,128,3)
+    y = np.random.randint(0,2,100)
+
+    model = create_model()
+    model.fit(X, y, epochs=3)
+
+    print("Training done ✅")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
